@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="govde">
+    <div class="saat">
+        Saat
+        <div class="styled-select green rounded">
+            <select id="saat">
+                @for (int i = 0; i <= 23; i++)
+                {
+                    if (i == DateTime.Now.Hour)
+                    {
+                        <option value="@i" id="hr" selected>@i</option>
+                    }
+                    else
+                    {
+                        <option value="@i">@i</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+    <div class="dakika">
+        Dakika
+        <div class="styled-select green rounded">
+            <select id="dakika">
+                @for (int j = 0; j <= 59; j++)
+                {
+                    if (j == DateTime.Now.Minute)
+                    {
+                        <option value="@j" id="mn" selected>@j</option>
+                    }
+                    else
+                    {
+                        <option value="@j">@j</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+    <div id="goruntule">
+
+    </div>
+    <div class="d-clock">
+        <article class="clock">
+            <div class="hours-container">
+                <div class="hours"></div>
+            </div>
+            <div class="minutes-container">
+                <div class="minutes"></div>
+            </div>
+            <div class="seconds-container">
+                <div class="seconds"></div>
+            </div>
+        </article>
+    </div>
+</div>
